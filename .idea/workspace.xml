@@ -24,6 +24,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -46,6 +47,10 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="446" y="-927" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605667399639">
+      <screen x="-149" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="446" y="-927" key="#com.intellij.execution.impl.EditConfigurationsDialog/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605667399639" />
     <state x="547" y="-734" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605572088963">
       <screen x="-149" y="-1080" width="1920" height="1080" />
     </state>
@@ -54,6 +59,22 @@
       <screen x="-149" y="-1080" width="1920" height="1080" />
     </state>
     <state x="470" y="-758" key="EditFileWatcherDialog/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605573132198" />
+    <state width="1294" height="305" key="GridCell.Tab.0.bottom" timestamp="1605667298977">
+      <screen x="-149" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.bottom/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605667298977" />
+    <state width="1294" height="305" key="GridCell.Tab.0.center" timestamp="1605667298975">
+      <screen x="-149" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.center/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605667298975" />
+    <state width="1294" height="305" key="GridCell.Tab.0.left" timestamp="1605667298975">
+      <screen x="-149" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.left/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605667298975" />
+    <state width="1294" height="305" key="GridCell.Tab.0.right" timestamp="1605667298976">
+      <screen x="-149" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1294" height="305" key="GridCell.Tab.0.right/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605667298976" />
     <state x="320" y="-904" key="SettingsEditor" timestamp="1605573182347">
       <screen x="-149" y="-1080" width="1920" height="1080" />
     </state>

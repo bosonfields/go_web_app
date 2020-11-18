@@ -1,3 +1,35 @@
 {"level":"DEBUG","time":"2020-11-17T17:03:08.512-0500","caller":"web_app/main.go:38","msg":"message"}
 {"level":"INFO","time":"2020-11-17T17:03:34.846-0500","caller":"web_app/main.go:75","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2020-11-17T17:03:35.349-0500","caller":"web_app/main.go:84","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T21:25:17.103-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"ERROR","time":"2020-11-17T21:25:17.110-0500","caller":"mysql/mysql.go:28","msg":"connect DB failed","error":"Error 1045: Access denied for user 'root'@'localhost' (using password: NO)"}
+{"level":"DEBUG","time":"2020-11-17T21:26:28.265-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"ERROR","time":"2020-11-17T21:26:28.269-0500","caller":"mysql/mysql.go:28","msg":"connect DB failed","error":"Error 1045: Access denied for user 'root'@'localhost' (using password: NO)"}
+{"level":"DEBUG","time":"2020-11-17T22:16:39.100-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"DEBUG","time":"2020-11-17T22:17:08.774-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"INFO","time":"2020-11-17T22:17:18.339-0500","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T22:17:18.844-0500","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T23:03:45.772-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"INFO","time":"2020-11-17T23:10:12.399-0500","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T23:10:12.901-0500","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T23:10:18.259-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"INFO","time":"2020-11-17T23:10:59.983-0500","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T23:11:00.484-0500","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T23:11:03.398-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"INFO","time":"2020-11-17T23:13:46.120-0500","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T23:13:46.622-0500","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T23:13:58.116-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"INFO","time":"2020-11-17T23:14:49.765-0500","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T23:14:50.266-0500","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T23:14:55.981-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"INFO","time":"2020-11-17T23:16:43.554-0500","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T23:16:44.058-0500","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T23:16:46.707-0500","caller":"web_app/main.go:39","msg":"message"}
+{"level":"INFO","time":"2020-11-17T23:18:40.925-0500","caller":"web_app/main.go:81","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T23:18:41.429-0500","caller":"web_app/main.go:90","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T23:19:14.976-0500","caller":"web_app/main.go:37","msg":"message"}
+{"level":"INFO","time":"2020-11-17T23:19:19.290-0500","caller":"logger/logger.go:68","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36","errors":"","cost":0.000027321}
+{"level":"INFO","time":"2020-11-17T23:19:19.451-0500","caller":"logger/logger.go:68","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36","errors":"","cost":0.000080312}
+{"level":"INFO","time":"2020-11-17T23:19:45.636-0500","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.000365893}
+{"level":"INFO","time":"2020-11-17T23:33:41.030-0500","caller":"web_app/main.go:79","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T23:33:41.535-0500","caller":"web_app/main.go:88","msg":"Server exiting"}

@@ -12,10 +12,9 @@ import (
 	"web_app/dao/mysql"
 	"web_app/dao/redis"
 	"web_app/logger"
+	"web_app/pkg/snowflake"
 	"web_app/routes"
 	"web_app/settings"
-
-	"github.com/spf13/viper"
 
 	"go.uber.org/zap"
 )
@@ -50,10 +49,15 @@ func main() {
 	defer redis.Close()
 	// 5. register router
 
+	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineId); err != nil {
+		fmt.Printf("init snowflake failed:%v\n", err)
+		return
+	}
+
 	r := routes.Setup()
 	// 6  start server (elegant shutdown)
 	srv := &http.Server{
-		Addr:    fmt.Sprintf(":%d", viper.GetInt("app.port")),
+		Addr:    fmt.Sprintf(":%d", settings.Conf.Port),
 		Handler: r,
 	}
 
