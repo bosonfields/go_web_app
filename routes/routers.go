@@ -20,9 +20,9 @@ func Setup() *gin.Engine {
 		c.String(http.StatusOK, "pong")
 	})
 
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "ok")
-	})
+	//r.GET("/", func(c *gin.Context) {
+	//	c.String(http.StatusOK, "ok")
+	//})
 
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusNotFound, gin.H{

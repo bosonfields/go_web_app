@@ -9,6 +9,7 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+	"web_app/controller"
 	"web_app/dao/mysql"
 	"web_app/dao/redis"
 	"web_app/logger"
@@ -54,6 +55,10 @@ func main() {
 		return
 	}
 
+	if err := controller.InitValidator("en"); err != nil {
+		fmt.Printf("init validator failed, err:%v\n", err)
+		return
+	}
 	r := routes.Setup()
 	// 6  start server (elegant shutdown)
 	srv := &http.Server{
