@@ -1,7 +1,9 @@
 package controller
 
 import (
+	"errors"
 	"net/http"
+	"web_app/dao/mysql"
 	"web_app/logic"
 	"web_app/models"
 
@@ -20,42 +22,54 @@ func SignUpHandler(c *gin.Context) {
 
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			"msg": removeTopStruct(errs.Translate(trans)),
-		})
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 
-		//c.JSON(http.StatusOK, gin.H{
-		//	"msg": err.Error(),
-		//})
 		return
 	}
 
-	//fmt.Println(p)
-	// verify
-
-	//if len(p.Username) == 0 || len(p.Password) == 0 || p.RePassword != p.Password {
-	//	zap.L().Error("SignUp with invalid param")
-	//	c.JSON(http.StatusOK, gin.H{
-	//		"msg": "params has error",
-	//	})
-	//	return
-	//}
-
-	//fmt.Println(p)
-	// 2. measurement
 	if err := logic.SignUp(p); err != nil {
+		zap.L().Error("logic.SignUp failed", zap.Error(err))
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+		}
+		ResponseError(c, CodeServerBusy)
+
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "register failed",
 		})
 		return
 	}
 	// 3. return
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
-	})
+	ResponseSuccess(c, nil)
+}
+
+func LoginHandler(c *gin.Context) {
+	// 1. verify
+	p := new(models.ParamLogin)
+
+	if err := c.ShouldBindJSON(p); err != nil {
+		zap.L().Error("Login with invalid param", zap.Error(err))
+
+		errs, ok := err.(validator.ValidationErrors)
+		if !ok {
+			ResponseError(c, CodeInvalidParam)
+			return
+		}
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
+		return
+	}
+	// logic processing
+	if err := logic.Login(p); err != nil {
+		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExist)
+		}
+		ResponseError(c, CodeInvalidPassword)
+		return
+	}
+	// return response
+	ResponseSuccess(c, nil)
 }

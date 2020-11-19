@@ -79,3 +79,27 @@
 {"level":"INFO","time":"2020-11-18T16:36:43.062-0500","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.066134701}
 {"level":"INFO","time":"2020-11-18T16:39:49.675-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2020-11-18T16:39:50.176-0500","caller":"web_app/main.go:93","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T16:48:59.030-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"ERROR","time":"2020-11-18T16:49:13.055-0500","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2020-11-18T16:49:13.055-0500","caller":"logger/logger.go:78","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.000588512}
+{"level":"INFO","time":"2020-11-18T16:53:21.581-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T16:53:22.081-0500","caller":"web_app/main.go:93","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T16:53:26.569-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"ERROR","time":"2020-11-18T16:53:31.497-0500","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2020-11-18T16:53:31.497-0500","caller":"logger/logger.go:78","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.000417239}
+{"level":"INFO","time":"2020-11-18T16:53:34.654-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T16:53:35.156-0500","caller":"web_app/main.go:93","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T16:53:42.640-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"INFO","time":"2020-11-18T16:53:49.257-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T16:53:49.257-0500","caller":"web_app/main.go:93","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T17:10:04.974-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"INFO","time":"2020-11-18T17:10:17.419-0500","caller":"logger/logger.go:77","msg":"/login","status":404,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.00016839}
+{"level":"INFO","time":"2020-11-18T17:11:10.580-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T17:11:11.086-0500","caller":"web_app/main.go:93","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T17:11:14.288-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"ERROR","time":"2020-11-18T17:11:17.565-0500","caller":"controller/user.go:68","msg":"Login with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2020-11-18T17:11:17.565-0500","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.000192091}
+{"level":"ERROR","time":"2020-11-18T17:11:30.631-0500","caller":"controller/user.go:85","msg":"logic.Login failed"}
+{"level":"INFO","time":"2020-11-18T17:11:30.631-0500","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.212550065}
+{"level":"INFO","time":"2020-11-18T20:26:36.753-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T20:26:37.258-0500","caller":"web_app/main.go:93","msg":"Server exiting"}

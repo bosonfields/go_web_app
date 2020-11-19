@@ -59,7 +59,7 @@ func main() {
 		fmt.Printf("init validator failed, err:%v\n", err)
 		return
 	}
-	r := routes.Setup()
+	r := routes.Setup(settings.Conf.Mode)
 	// 6  start server (elegant shutdown)
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", settings.Conf.Port),
