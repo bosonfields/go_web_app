@@ -23,7 +23,9 @@ func Setup(mode string) *gin.Engine {
 	r.POST("/login", controller.LoginHandler)
 
 	r.GET("/ping", func(c *gin.Context) {
+		// if registered
 		c.String(http.StatusOK, "pong")
+		// please register
 	})
 
 	//r.GET("/", func(c *gin.Context) {
