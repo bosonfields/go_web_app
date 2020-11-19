@@ -113,3 +113,7 @@
 {"level":"INFO","time":"2020-11-18T21:47:40.577-0500","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.072663245}
 {"level":"INFO","time":"2020-11-18T21:47:54.958-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2020-11-18T21:47:55.458-0500","caller":"web_app/main.go:93","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T22:11:39.363-0500","caller":"web_app/main.go:38","msg":"message"}
+{"level":"INFO","time":"2020-11-18T22:11:41.914-0500","caller":"logger/logger.go:77","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"::1","user-agent":"PostmanRuntime/7.24.1","errors":"","cost":0.000233204}
+{"level":"INFO","time":"2020-11-18T22:49:05.814-0500","caller":"web_app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T22:49:06.319-0500","caller":"web_app/main.go:93","msg":"Server exiting"}

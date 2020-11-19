@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"web_app/controller"
 	"web_app/logger"
+	"web_app/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
@@ -22,8 +23,9 @@ func Setup(mode string) *gin.Engine {
 
 	r.POST("/login", controller.LoginHandler)
 
-	r.GET("/ping", func(c *gin.Context) {
-		// if registered
+	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
+		// if registered, judge where header exist valid JWT
+
 		c.String(http.StatusOK, "pong")
 		// please register
 	})
