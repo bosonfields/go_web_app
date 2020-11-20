@@ -2,7 +2,6 @@ package controller
 
 import (
 	"errors"
-	"net/http"
 	"web_app/dao/mysql"
 	"web_app/logic"
 	"web_app/models"
@@ -37,9 +36,6 @@ func SignUpHandler(c *gin.Context) {
 		}
 		ResponseError(c, CodeServerBusy)
 
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "register failed",
-		})
 		return
 	}
 	// 3. return

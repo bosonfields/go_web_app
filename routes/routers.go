@@ -17,18 +17,29 @@ func Setup(mode string) *gin.Engine {
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
+	v1 := r.Group("/api/v1")
+
 	//register route
+	v1.POST("/signup", controller.SignUpHandler)
 
-	r.POST("/signup", controller.SignUpHandler)
+	v1.POST("/login", controller.LoginHandler)
 
-	r.POST("/login", controller.LoginHandler)
+	v1.Use(middlewares.JWTAuthMiddleware())
 
-	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
-		// if registered, judge where header exist valid JWT
+	{
+		v1.GET("/community", controller.CommunityHandler)
+		v1.GET("/community/:id", controller.CommunityDetailHandler)
 
-		c.String(http.StatusOK, "pong")
-		// please register
-	})
+		v1.POST("/post", controller.CreatePostHandler)
+
+	}
+
+	//r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
+	//	// if registered, judge where header exist valid JWT
+	//
+	//	c.String(http.StatusOK, "pong")
+	//	// please register
+	//})
 
 	//r.GET("/", func(c *gin.Context) {
 	//	c.String(http.StatusOK, "ok")

@@ -4,19 +4,12 @@ import (
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
-	"errors"
 	"web_app/models"
 )
 
 // 把每一步数据库操作封装
 
 const secret = "bosonfields.com"
-
-var (
-	ErrorUserExist       = errors.New("user already exist")
-	ErrorUserNotExist    = errors.New("user not exist")
-	ErrorInvalidPassword = errors.New("incorrect password")
-)
 
 // CheckUserExist
 func CheckUserExist(username string) (err error) {
