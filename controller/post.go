@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"strconv"
 	"web_app/logic"
 	"web_app/models"
 
@@ -21,6 +22,7 @@ func CreatePostHandler(c *gin.Context) {
 	}
 	// get userID from c
 	userID, err := getCurrentUserID(c)
+
 	if err != nil {
 		ResponseError(c, CodeNeedLogin)
 	}
@@ -32,4 +34,33 @@ func CreatePostHandler(c *gin.Context) {
 	}
 	// 3 return
 	ResponseSuccess(c, nil)
+}
+
+func GetPostDetailHandler(c *gin.Context) {
+	pidStr := c.Param("id")
+	pid, err := strconv.ParseInt(pidStr, 10, 64)
+	if err != nil {
+		zap.L().Error("get post detail with invalid param", zap.Error(err))
+	}
+
+	data, err := logic.GetPostById(pid)
+	if err != nil {
+		zap.L().Error("logic.GetPostById(pid) failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, data)
+}
+
+func GetPostListHandler(c *gin.Context) {
+
+	page, size := getPageInfo(c)
+
+	data, err := logic.GetPostList(page, size)
+	if err != nil {
+		zap.L().Error("logic.GetPostList() failed", zap.Error(err))
+		ResponseError(c, CodeServerBusy)
+		return
+	}
+	ResponseSuccess(c, data)
 }

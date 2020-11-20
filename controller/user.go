@@ -68,5 +68,6 @@ func LoginHandler(c *gin.Context) {
 		return
 	}
 	// return response
+	zap.L().Info("token　here: ", zap.Any("token", token))
 	ResponseSuccess(c, token)
 }

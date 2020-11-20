@@ -4,6 +4,7 @@ import (
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
+	"fmt"
 	"web_app/models"
 )
 
@@ -62,5 +63,13 @@ func Login(user *models.User) (err error) {
 	if password != user.Password {
 		return ErrorInvalidPassword
 	}
+	return
+}
+
+func GetUserById(uid int64) (user *models.User, err error) {
+	user = new(models.User)
+	fmt.Printf("uid%d\n", uid)
+	sqlStr := `select user_id, username from user where user_id = ?`
+	err = db.Get(user, sqlStr, uid)
 	return
 }

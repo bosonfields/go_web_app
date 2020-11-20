@@ -5,6 +5,8 @@ import (
 	"web_app/models"
 	"web_app/pkg/jwt"
 	"web_app/pkg/snowflake"
+
+	"go.uber.org/zap"
 )
 
 func SignUp(p *models.ParamSignUp) (err error) {
@@ -43,5 +45,6 @@ func Login(p *models.ParamLogin) (token string, err error) {
 	}
 
 	// generate JWT
+	zap.L().Info("check login userID in login", zap.Int64("p.userID", user.UserID))
 	return jwt.GenToken(user.UserID, user.Username)
 }
