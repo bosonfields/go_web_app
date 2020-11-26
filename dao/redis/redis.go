@@ -1,12 +1,10 @@
 package redis
 
 import (
-	"context"
 	"fmt"
-	"time"
 	"web_app/settings"
 
-	"github.com/go-redis/redis/v8" // 注意导入的是新版本
+	"github.com/go-redis/redis" // 注意导入的是新版本
 )
 
 //var (
@@ -40,10 +38,12 @@ func Init(cfg *settings.RedisConfig) (err error) {
 		MinIdleConns: cfg.MinIdleConns,
 	})
 
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
+	//ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	//defer cancel()
 
-	_, err = client.Ping(ctx).Result()
+	//_, err = client.Ping(ctx).Result()
+	_, err = client.Ping().Result()
+
 	if err != nil {
 		return err
 	}

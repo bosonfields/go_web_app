@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="246dda33-bcd5-4d01-8b76-10f02c0b6e95" name="Default Changelist" comment="" />
+    <list default="true" id="246dda33-bcd5-4d01-8b76-10f02c0b6e95" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/vote.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/vote.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/redis/keys.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/keys.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/redis/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/web_app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/web_app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/vote.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/vote.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/params.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/params.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/air_errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/air_errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +28,9 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
@@ -79,9 +95,9 @@
       <screen x="-149" y="-1080" width="1920" height="1080" />
     </state>
     <state x="320" y="-904" key="SettingsEditor/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605573182347" />
-    <state x="476" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1605731680623">
+    <state x="476" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1605920910674">
       <screen x="-149" y="-1080" width="1920" height="1080" />
     </state>
-    <state x="476" y="-839" width="670" height="676" key="search.everywhere.popup/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605731680623" />
+    <state x="476" y="-839" width="670" height="676" key="search.everywhere.popup/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605920910674" />
   </component>
 </project>
