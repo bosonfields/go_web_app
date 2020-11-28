@@ -5,6 +5,7 @@ const (
 	KeyPostTimeZSet    = "post:time"
 	KeyPostScoreZSet   = "post:score"
 	KeyPostVotedZSetPF = "post:voted:" //post:voted:postId
+	KeyCommunitySetPF  = "community:"
 )
 
 func getRedisKey(key string) string {

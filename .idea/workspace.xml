@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="246dda33-bcd5-4d01-8b76-10f02c0b6e95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dao/redis/post.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/vote.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/vote.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/mysql/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/mysql/post.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/redis/keys.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/keys.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/redis/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/redis/vote.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/redis/vote.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/web_app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/web_app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logic/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/post.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic/vote.go" beforeDir="false" afterPath="$PROJECT_DIR$/logic/vote.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/params.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/params.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/post.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/routers.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/air_errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/air_errors.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
     </list>
@@ -59,14 +80,27 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="-927" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605667399639">
-      <screen x="-149" y="-1080" width="1920" height="1080" />
+    <state x="521" y="149" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606531704659">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="446" y="-927" key="#com.intellij.execution.impl.EditConfigurationsDialog/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605667399639" />
+    <state x="521" y="149" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1606531704659" />
     <state x="547" y="-734" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605572088963">
       <screen x="-149" y="-1080" width="1920" height="1080" />
     </state>
@@ -95,9 +129,10 @@
       <screen x="-149" y="-1080" width="1920" height="1080" />
     </state>
     <state x="320" y="-904" key="SettingsEditor/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605573182347" />
-    <state x="476" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1605920910674">
-      <screen x="-149" y="-1080" width="1920" height="1080" />
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1606535599162">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="476" y="-839" width="670" height="676" key="search.everywhere.popup/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1605920910674" />
+    <state x="476" y="-839" width="670" height="676" key="search.everywhere.popup/-149.-1080.1920.1080/0.0.1680.1050@-149.-1080.1920.1080" timestamp="1606371285929" />
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1606535599162" />
   </component>
 </project>

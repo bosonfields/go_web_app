@@ -2,6 +2,7 @@ package redis
 
 import (
 	"errors"
+	"strconv"
 	"time"
 
 	"go.uber.org/zap"
@@ -16,9 +17,10 @@ const (
 
 var (
 	ErrVoteTimeExpire = errors.New("INVALID VOTE TIME")
+	ErrVoteRepeat     = errors.New("REPEAT VOTE NOT ALLOWED")
 )
 
-func CreatePost(postID int64) error {
+func CreatePost(postID, communityID int64) error {
 
 	pipeline := client.TxPipeline()
 
@@ -32,6 +34,8 @@ func CreatePost(postID int64) error {
 		Member: postID,
 	}).Result()
 
+	cKey := getRedisKey(KeyCommunitySetPF + strconv.Itoa(int(communityID)))
+	pipeline.SAdd(cKey, postID)
 	_, err := pipeline.Exec()
 	return err
 }
@@ -43,6 +47,10 @@ func VoteForPost(userID, postID string, value float64) error {
 		return ErrVoteTimeExpire
 	}
 	ov := client.ZScore(getRedisKey(KeyPostVotedZSetPF+postID), userID).Val()
+	if value == ov {
+		return ErrVoteRepeat
+	}
+
 	diff := value - ov
 
 	pipeline := client.TxPipeline()
