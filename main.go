@@ -10,6 +10,7 @@ import (
 	"syscall"
 	"time"
 	"web_app/controller"
+	"web_app/dao/mongodb"
 	"web_app/dao/mysql"
 	"web_app/dao/redis"
 	"web_app/logger"
@@ -49,6 +50,13 @@ func main() {
 	}
 	defer redis.Close()
 	// 5. register router
+
+	if err := mongodb.Init(settings.Conf.MongodbConfig); err != nil {
+		fmt.Printf("init mongodb failed, err:%v\n", err)
+		return
+	}
+
+	defer mongodb.Close()
 
 	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineId); err != nil {
 		fmt.Printf("init snowflake failed:%v\n", err)

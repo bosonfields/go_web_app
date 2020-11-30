@@ -11,15 +11,16 @@ import (
 var Conf = new(AppConfig)
 
 type AppConfig struct {
-	Name         string `mapstructure:"name"`
-	Mode         string `mapstructure:"mode"`
-	Port         int    `mapstructure:"port"`
-	Version      string `mapstructure:"version"`
-	StartTime    string `mapstructure:"start_time"`
-	MachineId    int64  `mapstructure:"machine_id"`
-	*LogConfig   `mapstructure:"log"`
-	*MySQLConfig `mapstructure:"mysql"`
-	*RedisConfig `mapstructure:"redis"`
+	Name           string `mapstructure:"name"`
+	Mode           string `mapstructure:"mode"`
+	Port           int    `mapstructure:"port"`
+	Version        string `mapstructure:"version"`
+	StartTime      string `mapstructure:"start_time"`
+	MachineId      int64  `mapstructure:"machine_id"`
+	*LogConfig     `mapstructure:"log"`
+	*MySQLConfig   `mapstructure:"mysql"`
+	*RedisConfig   `mapstructure:"redis"`
+	*MongodbConfig `mapstructure:"mongodb"`
 }
 
 type MySQLConfig struct {
@@ -39,6 +40,14 @@ type RedisConfig struct {
 	DB           int    `mapstructure:"db"`
 	PoolSize     int    `mapstructure:"pool_size"`
 	MinIdleConns int    `mapstructure:"min_idle_conns"`
+}
+
+type MongodbConfig struct {
+	Host     string `mapstructure:"host"`
+	Password string `mapstructure:"password"`
+	User     string `mapstructure:"user"`
+	DB       string `mapstructure:"db"`
+	Port     int    `mapstructure:"port"`
 }
 
 type LogConfig struct {
