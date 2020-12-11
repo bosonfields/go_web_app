@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="bluebell35.243.147.176" uuid="3bfc7a0a-731f-4fa7-a40b-4ad283da9225">
-      <database-info product="MySQL" version="8.0.15" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.15" exact-driver-version="8.0">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" qname="@" />
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
     <data-source name="bluebell_mongodb" uuid="98355236-1191-40c8-9bf8-a61e42929309">
       <database-info product="Mongo DB" version="4.4.2" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.8.3" dbms="MONGO" exact-version="4.4.2" exact-driver-version="1.8" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
@@ -26,6 +12,20 @@
             <name qname="@" />
             <name qname="bluebell" />
           </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="35.243.147.176mysql" uuid="bf0cce34-9f80-468a-824c-6e0f64cfb9da">
+      <database-info product="MySQL" version="8.0.22" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.22" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
     </data-source>
