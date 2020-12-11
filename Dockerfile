@@ -25,9 +25,17 @@ RUN go build -o bluebell .
 ###################
 FROM scratch
 
+COPY ./wait-for.sh /
 COPY ./conf /conf
 # 从builder镜像中把/dist/app 拷贝到当前目录
 COPY --from=builder /build/bluebell /
+
+RUN set -eux; \
+	apt-get update; \
+	apt-get install -y \
+		--no-install-recommends \
+		netcat; \
+        chmod 755 wait-for.sh
 
 # 需要运行的命令
 ENTRYPOINT ["/bluebell", "conf/config.yaml"]
